@@ -11,6 +11,10 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* HEADER */
 header {
     background-color: royalblue;
@@ -34,4 +38,60 @@ header .logo {
     left: 0;
     right: 0;
     margin: auto;
+    display: none;
+}
+
+header .sub-menu {
+    
+}
+
+header .sub-menu ul.menu {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+header .sub-menu ul.menu li {
+    position: relative;
+}
+
+/* before 가상용도 */
+header .sub-menu ul.menu li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+/* sign in 왼쪽 | 제거 */
+header .sub-menu ul.menu li:first-child:before {
+    display: none;
+}
+
+header .sub-menu ul.menu li a {
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+    color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+header .sub-menu .search {
+
+}
+
+header .sub-menu .search input {
+
+}
+
+header .sub-menu .search .material-icons {
+
 }
