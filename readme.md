@@ -144,3 +144,26 @@ window.addEventListener('scroll', _.throttle(function() {
 }, 300))
 ```
 
+
+
+#### css 우선순위
+
+```css
+.btn {
+    font-weight: 700;
+}
+/* css 선택자 1 => 10점 */
+
+.btn.btn--white {
+    background-color: #333;
+    color: #fff;
+}
+/* css 선택자 2 => 20점 */
+
+.btn.btn--white:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* css 선택자 3(2개+가상요소) => 30점 */
+```
+
